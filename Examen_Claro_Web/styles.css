@@ -1,0 +1,259 @@
+/* Reset básico y variables de la línea gráfica Claro */
+:root {
+    --claro-red: #DA291C;
+    --claro-dark: #333333;
+    --claro-light: #F7F7F7;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--claro-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background-color: var(--white);
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    color: var(--claro-red);
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--claro-dark);
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--claro-light);
+    padding: 60px 0;
+    min-height: calc(100vh - 150px);
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: var(--claro-red);
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.features-list p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.features-list i {
+    color: var(--claro-red);
+    margin-right: 10px;
+}
+
+/* Formulario Lead Gen */
+.hero-form-container {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 400px;
+}
+
+.lead-form h3 {
+    font-size: 1.8rem;
+    color: var(--claro-red);
+    margin-bottom: 5px;
+}
+
+.lead-form > p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    border-color: var(--claro-red);
+}
+
+.btn-primary {
+    width: 100%;
+    background-color: var(--claro-red);
+    color: var(--white);
+    padding: 15px;
+    border: none;
+    border-radius: 25px; /* Botón curvo estilo Claro */
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #B51D14;
+}
+
+.terms {
+    text-align: center;
+    font-size: 0.75rem !important;
+    margin-top: 15px !important;
+    margin-bottom: 0 !important;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--claro-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* Responsive para celulares */
+@media (max-width: 768px) {
+    .hero-text h2 {
+        font-size: 2.2rem;
+    }
+    .hero-content {
+        flex-direction: column;
+    }
+    .hero-form-container {
+        max-width: 100%;
+    }
+}
+/* =========================================
+   ANIMACIONES PARA LA LANDING PAGE
+   ========================================= */
+
+/* Definición de las animaciones */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulseButton {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Aplicando las animaciones a los elementos */
+
+/* El título entra primero desde la izquierda */
+.hero-text h2 {
+    animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+/* El texto y la lista entran después desde la izquierda (con retraso) */
+.hero-text p {
+    animation: fadeInLeft 0.8s ease-out 0.2s forwards;
+    opacity: 0; /* Empieza invisible */
+}
+
+.features-list {
+    animation: fadeInLeft 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+}
+
+/* El formulario entra desde abajo suavemente */
+.hero-form-container {
+    animation: fadeInUp 1s ease-out 0.3s forwards;
+    opacity: 0;
+}
+
+/* El botón hace un efecto de latido continuo para invitar al clic */
+.btn-primary {
+    animation: pulseButton 2s infinite ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #B51D14;
+    animation: none; /* Detiene el latido al pasar el mouse */
+    transform: scale(1.02); /* Crece un poquito fijo */
+}
