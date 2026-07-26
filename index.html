@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claro | Vuela con Fibra Óptica</title>
+    <!-- Fuente Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Cabecera -->
+    <header class="header">
+        <div class="container">
+            <!-- Logo de Claro dibujado con código SVG puro (¡Infalible!) -->
+            <svg viewBox="0 0 120 120" class="logo-img" xmlns="http://www.w3.org/2000/svg">
+                <!-- Círculo rojo -->
+                <circle cx="60" cy="60" r="60" fill="#DA291C" />
+                <!-- Texto blanco -->
+                <text x="50%" y="54%" font-family="'Roboto', sans-serif" font-size="36px" font-weight="900" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" letter-spacing="-1.5">Claro</text>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Hero Section (Banner principal con el formulario) -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h2>Cámbiate a la velocidad de la <span class="highlight">Fibra Óptica</span></h2>
+                <p>Descubre los mejores <strong>planes de internet</strong> para tu casa. Navega, juega y haz streaming sin interrupciones. Regístrate hoy y llévate <strong>Doble de Megas por 3 meses + Instalación Gratis.</strong></p>
+                <div class="features-list">
+                    <p><i class="fas fa-check-circle"></i> Hasta 500 Mbps de velocidad</p>
+                    <p><i class="fas fa-check-circle"></i> Incluye Claro Video</p>
+                    <p><i class="fas fa-check-circle"></i> Router Wi-Fi 6 de última generación</p>
+                </div>
+            </div>
+            
+            <!-- Formulario de Registro (Lead Gen) -->
+            <div class="hero-form-container">
+                <form class="lead-form" action="#" method="POST">
+                    <h3>Déjanos tus datos</h3>
+                    <p>Un asesor te contactará en minutos.</p>
+                    
+                    <div class="form-group">
+                        <label for="nombre">Nombre y Apellido</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefono">Número de Celular</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Ej. 099 123 4567" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ciudad">Ciudad</label>
+                        <select id="ciudad" name="ciudad" required>
+                            <option value="">Selecciona tu ciudad...</option>
+                            <option value="guayaquil">Guayaquil</option>
+                            <option value="quito">Quito</option>
+                            <option value="cuenca">Cuenca</option>
+                            <option value="otra">Otra</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">¡Quiero mi promoción!</button>
+                    <p class="terms">Al enviar aceptas nuestras políticas de privacidad.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sección de Beneficios Visuales -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">¿Por qué elegir Claro Fibra Óptica?</h2>
+            
+            <div class="benefits-grid">
+                <!-- Tarjeta 1 -->
+                <div class="benefit-card">
+                    <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=500&q=80" alt="Gamer con internet rápido" class="benefit-img">
+                    <h3>Ping bajo para Gamers</h3>
+                    <p>Juega online sin lag y descarga las actualizaciones más pesadas en minutos.</p>
+                </div>
+                
+                <!-- Tarjeta 2 -->
+                <div class="benefit-card">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&q=80" alt="Familia viendo streaming" class="benefit-img">
+                    <h3>Streaming en 4K</h3>
+                    <p>Toda la familia conectada al mismo tiempo viendo sus series favoritas sin pausas.</p>
+                </div>
+                
+                <!-- Tarjeta 3 -->
+                <div class="benefit-card">
+                    <!-- Cambiamos el enlace de la imagen por uno nuevo y seguro -->
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500&q=80" alt="Teletrabajo" class="benefit-img">
+                    <h3>Teletrabajo estable</h3>
+                    <p>Videollamadas perfectas y subida de archivos súper rápida para ser más productivo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner de Promoción (CTA Final) -->
+    <section class="promo-banner">
+        <div class="container promo-content">
+            <h2>¡No dejes pasar esta oportunidad!</h2>
+            <p>Contrata hoy y recibe <strong>Doble de Megas por 3 meses</strong> y la <strong>Instalación 100% Gratis</strong>.</p>
+            <a href="#" class="btn-secondary" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Quiero mi promoción</a>
+        </div>
+    </section>
+
+    <!-- Footer simple -->
+    <footer class="footer">
+        <p>&copy; 2026 Claro. Todos los derechos reservados. Landing page con fines académicos.</p>
+    </footer>
+
+</body>
+</html>
